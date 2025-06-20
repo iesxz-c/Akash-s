@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ========== BASE VARIABLES ========== */
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -64,20 +65,21 @@
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
   }
-}
 
-@layer base {
   * {
     @apply border-border !scroll-smooth;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   button {
     @apply active:outline-none;
   }
 }
 
+/* ========== UTILITIES ========== */
 @layer utilities {
   .heading {
     @apply font-bold text-4xl md:text-5xl text-center;
@@ -87,3 +89,17 @@
     background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
   }
 }
+
+/* ========== SCROLLBAR HIDE (OUTSIDE @layer) ========== */
+/* Stronger override */
+html, body {
+  overflow: -moz-scrollbars-none !important;
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none !important;
+}
+
