@@ -78,6 +78,13 @@
     @apply active:outline-none;
   }
 }
+body {
+  cursor: none;
+}
+* {
+  cursor: none !important;
+}
+
 
 /* ========== UTILITIES ========== */
 @layer utilities {

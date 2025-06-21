@@ -1,7 +1,5 @@
 import type { Config } from "tailwindcss";
-
 const svgToDataUri = require("mini-svg-data-uri");
-
 const colors = require("tailwindcss/colors");
 const {
   default: flattenColorPalette,
@@ -146,8 +144,27 @@ const config = {
             transform: "translate(calc(-50% - 0.5rem))",
           },
         },
+        "move-right": {
+          "0%": {
+            transform: "translateX(-50%)",
+          },
+          "100%": {
+            transform: "translateX(0%)",
+          },
+        },
+        "move-left": {
+  "0%": {
+    transform: "translateX(0%)",
+  },
+  "100%": {
+    transform: "translateX(-50%)",
+  },
+},
+
       },
       animation: {
+        "move-right": "move-right 1s linear infinite",
+        "move-left": "move-left 1s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         spotlight: "spotlight 2s ease .75s 1 forwards",
@@ -159,7 +176,7 @@ const config = {
         fifth: "moveInCircle 20s ease infinite",
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
-          'spin-slow': 'spin 6s linear infinite',
+        "spin-slow": "spin 6s linear infinite",
       },
     },
   },

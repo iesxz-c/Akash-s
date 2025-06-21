@@ -1,3 +1,4 @@
+'use client'
 import { Card } from "./Card";
 import { SectionHeader } from "./SectionHeader";
 import { FaStar } from "react-icons/fa";
@@ -17,8 +18,9 @@ import mapImage from "@/assets/images/map.png"
 import smileEmoji from "@/assets/images/memoji-smile.png"
 import { CardHeader } from "./CardHeader";
 import { ToolboxItems } from "./ToolboxItems";
-import { Globe } from "./ui/Globe";
 import GridGlobe from "./ui/GridGlobe";
+import { motion } from "framer-motion";
+import { useRef } from "react";
 
 const toolboxItems = [
   { title: "JavaScript", iconType: JsIcon},
@@ -42,6 +44,7 @@ const hobbies = [
 ];
 
 export const AboutSection = () => {
+  const constraintRef = useRef(null);
   return (
     <div className="py-16 lg:py-28">
       <div className="container">
@@ -68,10 +71,16 @@ export const AboutSection = () => {
           <CardHeader title="My Toolbox"
           description="Explore the technologies 
               and tools I use to craft."  className="px-6 pt-6"/>
-          <ToolboxItems toolboxItems={toolboxItems} className="mt-3"/>
+          <ToolboxItems toolboxItems={toolboxItems} className=""
+          itemsWrapperClassName="animate-move-left
+          [animation-duration:30s]
+          "
+          />
           <ToolboxItems toolboxItems={toolboxItems} 
           className="mt-4 " 
-          itemsWrapperClassName="-translate-x-1/2"/>
+          itemsWrapperClassName="animate-move-right 
+          [animation-duration:15s]
+          "/>
         </Card>
          </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-5
@@ -83,11 +92,11 @@ export const AboutSection = () => {
               beyond the code.
               " className="px-6 py-6"
               />
-          <div className="relative flex-1 ">
+          <div className="relative flex-1 " ref={constraintRef}>
             {hobbies.map(hobby=>(
-              <div key={hobby.title} 
+              <motion.div key={hobby.title} 
               className="inline-flex items-center 
-              gap-2 px-6 
+              gap-2 px-8 
               bg-gradient-to-r from-[#2c091f]
               to-[#5f1b3a] rounded-full py-1.5
               absolute 
@@ -96,11 +105,13 @@ export const AboutSection = () => {
                 left: hobby.left,
                 top: hobby.top
               }}
+              drag
+              dragConstraints={constraintRef}
               >
                 <span className="font-medium
                  text-gray-300">{hobby.title}</span>
                 <span >{hobby.emoji}</span>
-              </div>
+              </motion.div>
             ))}
           </div>
         </Card>
