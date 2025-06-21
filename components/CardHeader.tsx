@@ -6,7 +6,7 @@ export const CardHeader =({title , description, className}:{
     className?: string
 })=>{
     return(
-        <div className={twMerge("flex flex-col",className)}>
+        <div className={twMerge("flex flex-col p-6 ",className)}>
             <div className="inline-flex items-center gap-2">
             <StarIcon className="size-9 text-pink-300"/>
             <h3 className="font-serif text-3xl">

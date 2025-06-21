@@ -19,6 +19,7 @@ import { CardHeader } from "./CardHeader";
 import { ToolboxItems } from "./ToolboxItems";
 import { Globe } from "./ui/Globe";
 import GridGlobe from "./ui/GridGlobe";
+
 const toolboxItems = [
   { title: "JavaScript", iconType: JsIcon},
   { title: "HTML", iconType: Html},
@@ -29,6 +30,7 @@ const toolboxItems = [
   { title: "SQL", iconType: SQL},
   { title: "Linux", iconType: Linux},
 ];
+
 const hobbies = [
   { title: "Traveling", emoji: "🌍",left:'5%',top:'5%' },
   { title: "Comics", emoji: "🦸‍♂️",left:'50%',top:'5%' },
@@ -39,10 +41,9 @@ const hobbies = [
   { title: "Cooking", emoji: "🍳",left:'45%',top:'70%' }
 ];
 
-
 export const AboutSection = () => {
   return (
-    <div className="py-16">
+    <div className="py-16 lg:py-28">
       <div className="container">
       <SectionHeader
         title="A Glimpse Into My World"
@@ -51,28 +52,32 @@ export const AboutSection = () => {
          and what inspires me. "
       />
       <div className="mt-20 flex flex-col gap-8">
-        <Card className="h-[320px]">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-5 
+        md:gap-8 lg:grid-cols-3">
+        <Card className="h-[320px] md:col-span-2 lg:col-span-1">
           <CardHeader title="My Reads" 
           description="Explore the books shaping 
           my perspectives."
           />
-          <div className="w-40 mx-auto mt-8  ">
+          <div className="w-40 mx-auto mt-2  ">
           <Image src={bookImage} alt="book" />
           </div>
         </Card>
 
-        <Card className="h-[320px] p-0">
+        <Card className="h-[320px]  md:col-span-3 lg:col-span-2">
           <CardHeader title="My Toolbox"
           description="Explore the technologies 
               and tools I use to craft."  className="px-6 pt-6"/>
-          <ToolboxItems toolboxItems={toolboxItems} className="mt-6"/>
+          <ToolboxItems toolboxItems={toolboxItems} className="mt-3"/>
           <ToolboxItems toolboxItems={toolboxItems} 
-          className="mt-6 " 
+          className="mt-4 " 
           itemsWrapperClassName="-translate-x-1/2"/>
         </Card>
-
-
-        <Card className="h-[320px] p-0 flex flex-col">
+         </div>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-5
+        lg:grid-cols-3 ">
+        <Card className="h-[320px] p-0 flex flex-col md:col-span-3
+        lg:col-span-2">
           <CardHeader title="Beyond the Code"
           description="Explore my passions and interests 
               beyond the code.
@@ -99,13 +104,14 @@ export const AboutSection = () => {
             ))}
           </div>
         </Card>
-        <Card className="h-[320px] p-0 ">
+        <Card className="h-[320px] p-0 md:col-span-2 lg:col-span-1">
           <CardHeader title="Time-Agnostic"
           description=" Flexible across regions and time zones."
           className="px-6 py-6"
           />
           <GridGlobe/>
         </Card>
+        </div>
       </div>
       </div>
     </div>
