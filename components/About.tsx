@@ -17,6 +17,8 @@ import mapImage from "@/assets/images/map.png"
 import smileEmoji from "@/assets/images/memoji-smile.png"
 import { CardHeader } from "./CardHeader";
 import { ToolboxItems } from "./ToolboxItems";
+import { Globe } from "./ui/Globe";
+import GridGlobe from "./ui/GridGlobe";
 const toolboxItems = [
   { title: "JavaScript", iconType: JsIcon},
   { title: "HTML", iconType: Html},
@@ -82,7 +84,7 @@ export const AboutSection = () => {
               className="inline-flex items-center 
               gap-2 px-6 
               bg-gradient-to-r from-[#2c091f]
-              to-[#941c54] rounded-full py-1.5
+              to-[#5f1b3a] rounded-full py-1.5
               absolute 
               "
               style={{
@@ -97,9 +99,12 @@ export const AboutSection = () => {
             ))}
           </div>
         </Card>
-        <Card className="h-[320px] p-0">
-          <Image src={mapImage} alt="map" />
-          <Image src={smileEmoji} alt="smile" />
+        <Card className="h-[320px] p-0 ">
+          <CardHeader title="Time-Agnostic"
+          description=" Flexible across regions and time zones."
+          className="px-6 py-6"
+          />
+          <GridGlobe/>
         </Card>
       </div>
       </div>

@@ -84,3 +84,23 @@ export const Card = ({
     </div>
   );
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <Card className="h-[320px] p-0">
+          <Image src={mapImage} alt="map" />
+          <Image src={smileEmoji} alt="smile" />
+        </Card>
