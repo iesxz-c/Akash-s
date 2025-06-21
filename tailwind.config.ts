@@ -159,6 +159,7 @@ const config = {
         fifth: "moveInCircle 20s ease infinite",
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+          'spin-slow': 'spin 6s linear infinite',
       },
     },
   },
