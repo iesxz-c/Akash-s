@@ -78,12 +78,13 @@
     @apply active:outline-none;
   }
 }
-body {
+/* body {
   cursor: none;
-}
-* {
+} */
+/* * {
   cursor: none !important;
-}
+} */
+
 
 
 /* ========== UTILITIES ========== */
