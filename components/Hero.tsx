@@ -10,7 +10,7 @@ const Hero = () => {
    
     <>
     {/* <MouseGlow /> */}
-    <div className="pb-20 pt-36">
+    <div className="pb-20 pt-32">
       {/* Spotlights */}
       <div>
         <Spotlight className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen" fill="white" />
@@ -38,7 +38,7 @@ const Hero = () => {
           <TextGenerateEffect className="text-center text-[40px] md:text-5xl lg:text-6xl"
             words="I type. Things happen. Sometimes they even work"
           />
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
+          <p className="text-center font-mono md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             Hi! I&apos;m Akash, a Software Developer based in India.
           </p>
 
