@@ -45,10 +45,10 @@ const ProjectDetails = ({
           className="w-full h-36 object-cover rounded-t-lg"
         />
         <div className="p-3">
-          <h5 className="mb-1 text-lg font-semibold text-white">{title}</h5>
-          <p className="mb-2 text-xs text-neutral-400">{description}</p>
+          <h5 className="mb-1 text-lg font-serif text-purple">{title}</h5>
+          <p className="mb-2 text-xs font-mono text-neutral-400">{description}</p>
           {subDescription.map((subDesc, index) => (
-            <p key={index} className="mb-2 text-xs text-neutral-400">
+            <p key={index} className="mb-2 font-mono text-xs text-neutral-400">
               {subDesc}
             </p>
           ))}
@@ -67,7 +67,9 @@ const ProjectDetails = ({
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-xs font-medium text-blue-400 hover:underline"
+              className="inline-flex items-center gap-1 text-xs 
+              font-medium text-blue-400 hover:underline"
+              font-serif
             >
               View Project
               <img src="assets/arrow-up.svg" className="w-3 h-3" />
