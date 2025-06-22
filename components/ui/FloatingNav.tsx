@@ -73,10 +73,17 @@ export const FloatingNav = ({
             <span className=" text-sm !cursor-pointer">{navItem.name}</span>
           </a>
         ))}
-        <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-pink-300 px-4 py-2 rounded-full">
-          <span>Github</span>
-          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
-        </button>
+        <a
+  href="https://github.com/iesxz-c"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-pink-300 px-4 py-2 rounded-full">
+    <span>Github</span>
+    <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
+  </button>
+</a>
+
       </motion.div>
     </AnimatePresence>
   );
