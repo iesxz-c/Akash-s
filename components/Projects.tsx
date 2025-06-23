@@ -14,7 +14,7 @@ const Projects = () => {
   const [preview, setPreview] = useState<string | null>(null);
 
   const handleMouseMove = (e: React.MouseEvent) => {
-    x.set(e.clientX + 20);
+    x.set(e.clientX + 20);            
     y.set(e.clientY + 20);
   };
 
