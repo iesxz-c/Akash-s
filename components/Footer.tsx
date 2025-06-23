@@ -1,3 +1,4 @@
+
 import { FaLocationArrow } from "react-icons/fa6";
 
 import { socialMedia } from "@/data";
@@ -22,11 +23,13 @@ const Footer = () => {
         <p className="font-mono text-xs text-white-200 md:mt-10 my-5 text-center">
            Got a cool idea? Let’s build it before finals hit.
         </p>
-        <a href="mailto:akashiyu18@gmail.com">
+        <a href=" /">
           <MagicButton
             title="Let's get in touch"
             icon={<FaLocationArrow />}
             position="right"
+              
+
           />
         </a>
       </div>

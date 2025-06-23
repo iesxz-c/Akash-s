@@ -5,12 +5,16 @@ const MagicButton = ({
   icon,
   position,
   handleClick,
+  as = "button", // 'button' or 'a'
+
   otherClasses,
 }: {
   title: string
   icon?: React.ReactNode
   position?: string
   handleClick?: () => void
+    as?: "button" | "a";
+
   otherClasses?: string
 }) => {
   return (
