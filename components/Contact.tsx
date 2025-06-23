@@ -1,6 +1,8 @@
 "use client"
 import { useState } from "react"
 import emailjs from "@emailjs/browser"
+import Alert from "./Alert";
+import { Particles } from "./Particles";
 const Contact = () => {
     const [formData,setFormData] = useState({
         name: "",
@@ -8,6 +10,9 @@ const Contact = () => {
         message: ""
     });
     const[isLoading,setIsLoading] = useState(false);
+    const [showAlert, setShowAlert] = useState(false);
+  const [alertType, setAlertType] = useState("success");
+  const [alertMessage, setAlertMessage] = useState("");
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({
             ...formData,
@@ -16,6 +21,16 @@ const Contact = () => {
         })
             
     }
+
+    const showAlertMessage = (type: string, message: string) => {
+    setAlertType(type);
+    setAlertMessage(message);
+    setShowAlert(true);
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 4000);
+  };
+
     const handleSubmit = async(e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsLoading(true);
@@ -29,15 +44,15 @@ const Contact = () => {
           message: formData.message
         },"dPLAumiFJOgRkvh_k")
         setIsLoading(false);
-        alert("success");
         setFormData({
           name: "",
           email: "",
           message: ""
         })
+        showAlertMessage("success", "Message Sent Successfully");
         } catch (error) {
           setIsLoading(false);
-          alert("error");
+          showAlertMessage( "danger","Failed to send message.Please try again.");
         }
 
         
@@ -45,9 +60,25 @@ const Contact = () => {
         //template_5upukgn
     }
     return (
+        <div id="contact">
+          <div className="pb-20">
+          <h1 className="heading">
+        Contact {" "}
+        <span className="text-purple">!</span>
+      </h1>
+      </div>
         <section className="relative flex 
         items-center c-space section-spacing">
-            <div className="flex flex-col
+          <Particles
+        className="absolute inset-0 z-0"
+        quantity={100}
+        ease={80}
+        color={"#ffffff"}
+        refresh
+      />
+          {showAlert && <Alert type={alertType} text={alertMessage} />}
+          
+            <div className="relative z-20 flex flex-col
              items-center justify-center 
              max-w-md p-5 mx-auto border
               border-white/10 rounded-2xl
@@ -56,17 +87,17 @@ const Contact = () => {
                 items-start w-full
                  gap-5 mb-10">
                     <h2 
-                    className="text-heading">
+                    className="text-heading text-purple  font-serif">
                         Let's Talk
                         </h2>
-                        <p className="font-normal text-neutral-400">
+                        <p className="font-mono text-sm text-neutral-400">
                           Have a question or want to say hello? I'd love to hear from you.
                         </p>
                 </div>
                 <form className="w-full" 
                 onSubmit={handleSubmit}>
           <div className="mb-5">
-            <label htmlFor="name" className="feild-label">
+            <label htmlFor="name" className="text-pink-800 font-serif feild-label">
               Full Name
             </label>
             <input
@@ -82,7 +113,7 @@ const Contact = () => {
             />
           </div>
           <div className="mb-5">
-            <label htmlFor="email" className="feild-label">
+            <label htmlFor="email" className=" text-pink-800  font-serif feild-label">
               Email
             </label>
             <input
@@ -99,7 +130,7 @@ const Contact = () => {
           </div>
           <div className="mb-5">
             <label htmlFor="message"
-             className="feild-label">
+             className="font-serif text-pink-800  feild-label">
               Message
             </label>
             <textarea
@@ -115,10 +146,13 @@ const Contact = () => {
             />
           </div>
           <div className="flex justify-center">
-  <button type="submit" className="border text-sm 
+  <button type="submit" className="border text-[1.2rem] 
+  font-serif
     font-medium relative border-neutral-200
     dark:border-white/[0.2] text-black
-    dark:text-pink-300 px-4 py-2 rounded-full">
+    dark:text-pink-300 px-8 py-3 rounded-full 
+    min-w-[180px]
+    ">
 
     <span>{!isLoading ? "Send" : "Sending..."}</span>
 
@@ -132,6 +166,7 @@ const Contact = () => {
         </form>
             </div>
         </section>
+        </div>
     )
 }
 
