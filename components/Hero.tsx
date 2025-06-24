@@ -1,10 +1,10 @@
 import React from 'react'
 import { Spotlight } from './ui/Spotlight'
-import { cn } from "@/lib/utils"
+//import { cn } from "@/lib/utils"
 import { TextGenerateEffect } from './text-generate-effect'
 import MagicButton from './ui/MagicButton'
 import { FaLocationArrow } from "react-icons/fa";
-import { MouseGlow } from './ui/MouseGlow'
+//import { MouseGlow } from './ui/MouseGlow'
 const Hero = () => {
   return (
    

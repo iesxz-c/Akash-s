@@ -17,13 +17,17 @@ const Footer = () => {
       </div>
 
       <div className="flex flex-col items-center">
-        <h1 className="heading lg:max-w-[45vw]">
-          Just a CS undergrad tryna <span className="text-purple">figuring things out.</span>
+        <h1 className="heading lg:max-w-[45vw] text-center">
+            Thanks for scrolling — 
+ <span className="text-purple"> let’s build </span>
+  something cool together.
         </h1>
         <p className="font-mono text-xs text-white-200 md:mt-10 my-5 text-center">
            Got a cool idea? Let’s build it before finals hit.
         </p>
-        <a href=" /">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=akashiyu18@gmail.com"
+        target="_blank"
+          rel="noopener noreferrer">
           <MagicButton
             title="Let's get in touch"
             icon={<FaLocationArrow />}
@@ -35,13 +39,19 @@ const Footer = () => {
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center"
       >
-        <div className="pb-10">
+        <div className="mt-10">
         <p className="md:text-base text-sm md:font-normal font-light">
           Copyright © 2025 Akash Krishnan
         </p>
 </div>
-        <div className="flex items-center md:gap-3 gap-6">
+        <div className="flex items-center md:gap-3 gap-6 mt-10">
           {socialMedia.map((info) => (
+              <a
+    key={info.id}
+    href={info.href}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
             <div
               key={info.id}
               className="w-10 h-10 cursor-pointer
@@ -52,6 +62,7 @@ const Footer = () => {
             >
               <img src={info.img} alt="icons" width={20} height={20} />
             </div>
+            </a>
           ))}
         </div>
       </div>

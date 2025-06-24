@@ -97,7 +97,7 @@ const Contact = () => {
                 <form className="w-full" 
                 onSubmit={handleSubmit}>
           <div className="mb-5">
-            <label htmlFor="name" className="text-pink-800 font-serif feild-label">
+            <label htmlFor="name" className="text-pink-600 font-serif feild-label">
               Full Name
             </label>
             <input
@@ -113,7 +113,7 @@ const Contact = () => {
             />
           </div>
           <div className="mb-5">
-            <label htmlFor="email" className=" text-pink-800  font-serif feild-label">
+            <label htmlFor="email" className=" text-pink-600  font-serif feild-label">
               Email
             </label>
             <input
@@ -130,7 +130,7 @@ const Contact = () => {
           </div>
           <div className="mb-5">
             <label htmlFor="message"
-             className="font-serif text-pink-800  feild-label">
+             className="font-serif text-pink-600  feild-label">
               Message
             </label>
             <textarea

@@ -1,8 +1,6 @@
 'use client'
 import { Card } from "./Card";
 import { SectionHeader } from "./SectionHeader";
-import { FaStar } from "react-icons/fa";
-import StarIcon from "@/assets/icons/star.svg"
 import Image from "next/image";
 import bookImage from "@/assets/images/book-cover.png"
 import JsIcon from "@/assets/icons/square-js.svg"
@@ -13,9 +11,6 @@ import Github from "@/assets/icons/github.svg"
 import Python from "@/assets/icons/python-brands.svg"
 import SQL from "@/assets/icons/db.svg"
 import Linux from "@/assets/icons/linux-brands.svg"
-import { TechIcon } from "./TechIcon";
-import mapImage from "@/assets/images/map.png"
-import smileEmoji from "@/assets/images/memoji-smile.png"
 import { CardHeader } from "./CardHeader";
 import { ToolboxItems } from "./ToolboxItems";
 import GridGlobe from "./ui/GridGlobe";
