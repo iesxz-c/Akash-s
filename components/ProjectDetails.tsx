@@ -71,7 +71,7 @@ const ProjectDetails = ({
               font-medium text-blue-400 hover:underline"
               font-serif
             >
-              View Project
+              View
               <img src="assets/arrow-up.svg" className="w-3 h-3" />
             </a>
           </div>
