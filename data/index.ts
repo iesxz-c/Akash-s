@@ -60,7 +60,7 @@ export const socialMedia = [
    {
     id:4,
     href: "https://www.instagram.com/iesx.z_c/",
-    img: "/assets/socials/instagram.svg",
+    img: "/inl.svg",
   }
 ];
 
