@@ -11,7 +11,7 @@ const RecentProjects = () => {
         Recent
         <span className="text-purple font-serif text-[40px]"> Projects</span>
       </h1>
-      <div className="flex flex-wrap items-start justify-center p-4 gap-x-24 gap-y-4 mt-0">
+      <div className="flex flex-wrap items-start justify-center mt-16 p-4 gap-x-24 gap-y-4 ">
         {projects.map(({
             id, 
             title, 
@@ -45,7 +45,7 @@ const RecentProjects = () => {
                                className="z-10 absolute bottom-0 w-full h-full object-contain lg:w-full"
                             />
                     </div>
-                    <h3 className="font-bold text-pink-500 font-serif text-base
+                    <h3 className="font-bold text-white font-serif text-base
                       lg:text-base md:text-base line-clamp-1 mb-2">
                         {title}
                     </h3>

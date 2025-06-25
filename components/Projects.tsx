@@ -19,16 +19,16 @@ const Projects = () => {
   };
 
   return (
-    <div className="mt-0 ">
+    <div className="mt-20 mb-24 ">
     <section
       onMouseMove={handleMouseMove}
       className="relative c-space section-spacing"
     >
        <h2 className="heading ">
         My {" "}
-        <span className="text-purple">Certificates</span>
+        <span className="text-purple font-serif">Certificates</span>
       </h2>
-      <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-24 h-[1px] w-full" />
+      <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-28 h-[1px] w-full " />
       {myProjects.map((project) => (
         <Project key={project.id} {...project} setPreview={setPreview} />
       ))}
