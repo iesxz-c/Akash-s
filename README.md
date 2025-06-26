@@ -20,8 +20,8 @@ It highlights some of my projects, tools I use, and a bit about me.
 To run locally:
 
 ```bash
-git clone https://github.com/your-username/your-repo-name
-cd your-repo-name
+git clone https://github.com/iesxz-c/Dev-Portfolio.git
+cd Dev-Portfolio
 npm install
 npm run dev
 ````
