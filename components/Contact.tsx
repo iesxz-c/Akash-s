@@ -3,6 +3,7 @@ import { useState } from "react"
 import emailjs from "@emailjs/browser"
 import Alert from "./Alert";
 import { Particles } from "./Particles";
+import { Sh } from "./Sh";
 const Contact = () => {
     const [formData,setFormData] = useState({
         name: "",
@@ -60,15 +61,12 @@ const Contact = () => {
         //template_5upukgn
     }
     return (
-        <div id="contact">
-          <div className="pb-20">
-          <h1 className="heading">
-        Contact {" "}
-        <span className="text-purple">!</span>
-      </h1>
+        <div id="contact" className="pt-8">
+          <div className="pb-20 ">
+          
       </div>
         <section className="relative flex 
-        items-center c-space section-spacing">
+        items-center c-space section-spacing pt-8">
           <Particles
         className="absolute inset-0 z-0"
         quantity={100}

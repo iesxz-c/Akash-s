@@ -2,16 +2,16 @@ import { projects } from '@/data'
 import React from 'react'
 import { PinContainer } from './ui/3d-pin'
 import { FaLocationArrow } from 'react-icons/fa'
-
+import { Sh } from './Sh'
 
 const RecentProjects = () => {
   return (
     <div id="projects" className='py-20'>
-       <h1 className="heading font-serif text-[50px]">
-        Recent
-        <span className="text-purple font-serif text-[40px]"> Projects</span>
-      </h1>
-      <div className="flex flex-wrap items-start justify-center mt-16 p-4 gap-x-24 gap-y-4 ">
+      <Sh
+       title="Recent Projects"
+                         description="Learn more about some of my recent projects."/>
+
+      <div className="flex flex-wrap items-start justify-center mt-20 p-4 gap-x-24 gap-y-4 ">
         {projects.map(({
             id, 
             title, 
@@ -72,7 +72,7 @@ const RecentProjects = () => {
                             ))}
                          </div>
                          <div className="flex justify-center items-center">
-                           <a   href={link}   target="_blank"   rel="noopener noreferrer"   className="flex items-center lg:text-xl md:text-xs text-sm text-pink-600" >   <span>Check Live Site</span>   <FaLocationArrow className="ms-3" color="#db2777" /> </a>
+                           <a   href={link}   target="_blank"   rel="noopener noreferrer"   className="flex items-center font-serif lg:text-xl md:text-xs text-sm text-pink-600" >   <span>Visit</span>   <FaLocationArrow className="ms-3" color="#db2777" /> </a>
                           </div>
                     </div>
                 </PinContainer>

@@ -3,14 +3,14 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { CanvasRevealEffect } from "./ui/canvas-reveal-effect";
+import { Sh } from "./Sh";
 
 const Approach = () => {
   return (
-    <section className="w-full py-10">
-      <h1 className="heading">
-        My <span className="text-purple">approach</span>
-      </h1>
-      <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
+    <section className="w-full py-10 pt-16 ">
+      <Sh title="My Workflow Approach"
+                         description="Here's how I approach each project"/>
+      <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4 pt-16">
         <Card
           title="Understand & Break Down
 "
