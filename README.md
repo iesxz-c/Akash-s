@@ -7,7 +7,6 @@ It highlights some of my projects, tools I use, and a bit about me.
 
 - Next.js (App Router)
 - Tailwind CSS
-- Framer Motion
 
 ## What's Inside
 
