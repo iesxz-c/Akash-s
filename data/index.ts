@@ -85,32 +85,32 @@ export const myProjects = [
     image: "/cso.jpg",
     tags: [
       {
-        id: 1,
+        id: "1",
         name: "C",
         path: "/cl.svg",
       },
       {
-        id: 2,
+        id: "2",
         name: "Python",
         path: "/pio.svg",
       },
       {
-        id: 3,
+        id: "3",
         name: "SQL",
         path: "sio.svg",
       },
       {
-        id: 4,
+        id: "4",
         name: "HTML",
         path: "/html5.svg",
       },
       {
-        id: 5,
+        id: "5",
         name: "Js",
         path: "/kio.svg",
       },
       {
-        id: 6,
+        id: "6",
         name: "Flask",
         path: "/jio.svg",
       },
@@ -132,7 +132,7 @@ export const myProjects = [
   image: "/hkp.png",
   tags: [
     {
-      id: 1,
+      id: "1",
       name: "Python",
       path: "/pio.svg",
     }
@@ -156,7 +156,7 @@ export const myProjects = [
   image: "/hkr.png",
   tags: [
     {
-      id: 1,
+      id:"1",
       name: "React",
       path: "/re.svg",
     }
