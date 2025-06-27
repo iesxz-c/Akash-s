@@ -37,7 +37,7 @@ const ProjectDetails = ({
           onClick={closeModal}
           className="absolute p-1.5 rounded-sm top-2.5 right-2.5 bg-midnight hover:bg-gray-500"
         >
-          <img src="assets/close.svg" className="w-4 h-4" />
+          <img src="/clll.svg" className="w-4 h-4" />
         </button>
         <img
           src={image}

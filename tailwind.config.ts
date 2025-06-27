@@ -106,6 +106,7 @@ const config = {
             backgroundPosition: "-200% 0",
           },
         },
+        
         moveHorizontal: {
           "0%": {
             transform: "translateX(-50%) translateY(-10%)",
@@ -163,6 +164,7 @@ const config = {
 
       },
       animation: {
+         'pulse-slow': 'pulse 3s infinite',
         "move-right": "move-right 1s linear infinite",
         "move-left": "move-left 1s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -178,6 +180,9 @@ const config = {
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
         "spin-slow": "spin 6s linear infinite",
       },
+      boxShadow: {
+    neon: "0 0 12px rgba(168, 85, 247, 0.4)",
+  },
     },
   },
   plugins: [

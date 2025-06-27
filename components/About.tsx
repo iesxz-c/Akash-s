@@ -91,28 +91,54 @@ export const AboutSection = () => {
               beyond the code.
               " className="px-6 py-6"
               />
-          <div className="relative flex-1 " ref={constraintRef}>
-            {hobbies.map(hobby=>(
-              <motion.div key={hobby.title} 
-              className="inline-flex items-center 
-              gap-2 px-8 
-              bg-gradient-to-r from-[#2c091f]
-              to-[#5f1b3a] rounded-full py-1.5
-              absolute 
-              "
-              style={{
-                left: hobby.left,
-                top: hobby.top
-              }}
-              drag
-              dragConstraints={constraintRef}
-              >
-                <span className="font-medium
-                 text-gray-300">{hobby.title}</span>
-                <span >{hobby.emoji}</span>
-              </motion.div>
-            ))}
-          </div>
+          
+                       {/* Mobile view – show hobby list in 2 rows */}
+             {/* Mobile view – hobby grid with glow and animation */}
+<div className="sm:hidden px-6 pb-6 grid grid-cols-2 gap-y-3 gap-x-4 text-sm">
+  {hobbies.map((hobby) => (
+    <div
+      key={hobby.title}
+      className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group shadow-inner shadow-purple-500/10 hover:shadow-purple-500/30"
+    >
+      <span className="text-xl animate-bounce group-hover:animate-none">{hobby.emoji}</span>
+      <span className="text-gray-100 font-medium group-hover:text-white transition-colors duration-200">
+        {hobby.title}
+      </span>
+    </div>
+  ))}
+</div>
+
+
+              {/* Desktop view – show draggable floating cards */}
+{/* Desktop view – draggable floating hobby cards */}
+<div className="relative flex-1 hidden sm:block" ref={constraintRef}>
+  {hobbies.map((hobby) => (
+    <motion.div
+      key={hobby.title}
+      className="absolute px-6 py-2 rounded-full bg-white/10 text-white border border-white/20 shadow-[0_0_15px_rgba(255,255,255,0.2)] backdrop-blur-xl"
+      style={{ left: hobby.left, top: hobby.top }}
+      drag
+      dragConstraints={constraintRef}
+      whileHover={{
+        scale: 1.15,
+        rotate: 2,
+        boxShadow: "0 0 25px rgba(255, 255, 255, 0.3)",
+      }}
+      whileTap={{ scale: 0.95, rotate: -2 }}
+      transition={{
+        type: "spring",
+        stiffness: 220,
+        damping: 18,
+      }}
+    >
+      <div className="flex items-center gap-3 text-sm font-semibold tracking-wide">
+        <span className="text-xl">{hobby.emoji}</span>
+        <span className="text-white">{hobby.title}</span>
+      </div>
+    </motion.div>
+  ))}
+</div>
+
         </Card>
         <Card className="h-[320px] p-0 md:col-span-2 lg:col-span-1">
           <CardHeader title="Time-Agnostic"
