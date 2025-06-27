@@ -1,11 +1,5 @@
-import React from 'react';
-
-// Option 1: More specific typing (recommended)
-interface TechIconProps {
-  component: React.ComponentType<{ className?: string }>;
-}
-
-export const TechIcon = ({ component: Component }: TechIconProps) => {
+export const TechIcon = ({ component }: { component: React.ElementType }) => {
+  const Component = component as React.ComponentType<{ className?: string }>;
   return (
     <>
       <Component className="size-10 fill-[url(#gradient)]" />
